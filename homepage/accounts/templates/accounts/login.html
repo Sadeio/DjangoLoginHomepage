@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+    <h1>Welcome</h1>
+    <p> You can log in here!</p>
+    <h2>Login</h2>
+    <form method="post">
+   <!--make a request form token -->
+        {% csrf_token %}
+        {{ form.as_p }} <!--creates a form as a paragraph (ex Login \n Username \n pword-->
+        <button type="submit">Login</button>
+    </form>
+    </div>
+{%  endblock %}
